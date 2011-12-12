@@ -1,0 +1,8 @@
+#activities
+
+:javascript
+  $(function() {
+    // Tigerella is the app name
+    window.router = new Tigerella.Routers.ActivitiesRouter({activities: #{@activities.to_json.html_safe}});
+    Backbone.history.start();
+  });

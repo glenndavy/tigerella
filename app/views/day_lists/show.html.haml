@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Date:
+  = @day_list.date
+
+= link_to 'Edit', edit_day_list_path(@day_list)
+\|
+= link_to 'Back', day_lists_path

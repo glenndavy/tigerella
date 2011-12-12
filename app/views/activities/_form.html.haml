@@ -1,0 +1,22 @@
+= form_for @activity do |f|
+  -if @activity.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@activity.errors.count, "error")} prohibited this activity from being saved:"
+      %ul
+        - @activity.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :comment
+    = f.text_area :comment
+  .field
+    = f.label :estimate
+    = f.number_field :estimate
+  .field
+    = f.label :day_list_id
+    = f.number_field :day_list_id
+  .actions
+    = f.submit 'Save'

@@ -1,4 +1,8 @@
 Tigerella::Application.routes.draw do
+  resources :day_lists
+
+  resources :activities
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
